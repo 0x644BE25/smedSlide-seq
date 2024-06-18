@@ -30,8 +30,6 @@ seu <- readRDS('../data/seurat_objects/under_tissue.rds')
 
 seu <- SCTransform(seu,vst.flavor='v1',return.only.var.genes=FALSE)
 seu <- RunPCA(seu,npcs=nPCs$undertissue)
-seu <- RunUMAP(seu,dims=1:nPCs$undertissue)
-seu <- FindNeighbors(seu,dims=1:nPCs$undertissue)
 
 # NOTE!! Despite my best efforts and vst.flavor='v1'
 # I cannot get the current version of Seurat to replicate
@@ -57,8 +55,6 @@ seu <- readRDS('../data/seurat_objects/piwi1_positive_subset.rds')
 seu <- SCTransform(seu)
 set.seed(seeds$piwipos)
 seu <- RunPCA(seu,npcs=nPCs$piwipos)
-seu <- RunUMAP(seu,dims=1:nPCs$piwipos)
-seu <- FindNeighbors(seu,dims=1:nPCs$piwipos,k.param=20)
 
 # Again with the SCTransform issue and the clustering
 seu$seurat_clusters <- droplevels(factor(meta[Cells(seu),'piwipos_cluster'],levels=0:99))
