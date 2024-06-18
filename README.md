@@ -1,4 +1,4 @@
-# smedSlide-seq
+# S. mediterranea Slide-seq
 
 This repository contains the code neccessary to perform the analysis in _Stem cell regulation without a contact-dependent niche_ by Benham-Pyle, Mann, et al.
 
