@@ -4,4 +4,4 @@ This repository contains the code neccessary to perform the analysis in _Stem ce
 
 Starting data (gene expression matrices) is available at https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE199348 EXCEPT for the bead metadata xlsx, which is pending update. In the meantime, the Supplementary_Table_4-bead_metadata.xlsx submitted with the manuscript is correct and should be substituted.
 
-** NOTE: ** submitted bead metadata clusters are original+1 (because Seurat likes to start at 0 and R prefers 1). 
+** NOTE: ** submitted bead metadata clusters are original+1 (because Seurat likes to start at 0 and R prefers 1). Subtract 1 to get proper cluster numbers.
